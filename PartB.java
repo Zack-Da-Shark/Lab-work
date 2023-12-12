@@ -17,8 +17,8 @@ public class PartB
     {
         while (true)
         {
-            String basic="The circumference of the ";
-            System.out.println("Pick a shape: square, rectangle, cirecle (or q to quit)");
+            String basic="The circumference of the";
+            System.out.println("Pick a shape: square, rectangle, circle (or q to quit)");
             String input = scan.nextLine();
             if(input.equals("q"))
             {
@@ -59,37 +59,37 @@ public class PartB
         int num2 = scan.nextInt();
         switch(num)
         {
-            case 1 : System.out.println("You selected the 1st of ");
-            case 2 : System.out.println("You selected the 2nd of ");
-            case 3 : System.out.println("You selected the 3rd of ");
-            case 4 : System.out.println("You selected the 4th of ");
-            case 5 : System.out.println("You selected the 5th of ");
-            case 6 : System.out.println("You selected the 6th of ");
-            case 7 : System.out.println("You selected the 7th of ");
-            case 8 : System.out.println("You selected the 8th of ");
-            case 9 : System.out.println("You selected the 9th of ");
-            case 10 : System.out.println("You selected the 10th of ");
-            case 11 : System.out.println("You selected the 11th of ");
-            case 12 : System.out.println("You selected the 12th of ");
-            case 13 : System.out.println("You selected the 13th of ");
-            case 14 : System.out.println("You selected the 14th of ");
-            case 15 : System.out.println("You selected the 15th of ");
-            case 16 : System.out.println("You selected the 16th of ");
-            case 17 : System.out.println("You selected the 17th of ");
-            case 18 : System.out.println("You selected the 18th of ");
-            case 19 : System.out.println("You selected the 19th of ");
-            case 20 : System.out.println("You selected the 20th of ");
-            case 21 : System.out.println("You selected the 21st of ");
-            case 22 : System.out.println("You selected the 22nd of ");
-            case 23 : System.out.println("You selected the 23rd of ");
-            case 24 : System.out.println("You selected the 24th of ");
-            case 25 : System.out.println("You selected the 25th of ");
-            case 26 : System.out.println("You selected the 26th of ");
-            case 27 : System.out.println("You selected the 27th of ");
-            case 28 : System.out.println("You selected the 28th of ");
-            case 29 : System.out.println("You selected the 29th of ");
-            case 30 : System.out.println("You selected the 30th of ");
-            case 31 : System.out.println("You selected the 31st of ");
+            case 1 : System.out.println("You selected the 1st of ");break;
+            case 2 : System.out.println("You selected the 2nd of ");break;
+            case 3 : System.out.println("You selected the 3rd of ");break;
+            case 4 : System.out.println("You selected the 4th of ");break;
+            case 5 : System.out.println("You selected the 5th of ");break;
+            case 6 : System.out.println("You selected the 6th of ");break;
+            case 7 : System.out.println("You selected the 7th of ");break;
+            case 8 : System.out.println("You selected the 8th of ");break;
+            case 9 : System.out.println("You selected the 9th of ");break;
+            case 10 : System.out.println("You selected the 10th of ");break;
+            case 11 : System.out.println("You selected the 11th of ");break;
+            case 12 : System.out.println("You selected the 12th of ");break;
+            case 13 : System.out.println("You selected the 13th of ");break;
+            case 14 : System.out.println("You selected the 14th of ");break;
+            case 15 : System.out.println("You selected the 15th of ");break;
+            case 16 : System.out.println("You selected the 16th of ");break;
+            case 17 : System.out.println("You selected the 17th of ");break;
+            case 18 : System.out.println("You selected the 18th of ");break;
+            case 19 : System.out.println("You selected the 19th of ");break;
+            case 20 : System.out.println("You selected the 20th of ");break;
+            case 21 : System.out.println("You selected the 21st of ");break;
+            case 22 : System.out.println("You selected the 22nd of ");break;
+            case 23 : System.out.println("You selected the 23rd of ");break;
+            case 24 : System.out.println("You selected the 24th of ");break;
+            case 25 : System.out.println("You selected the 25th of ");break;
+            case 26 : System.out.println("You selected the 26th of ");break;
+            case 27 : System.out.println("You selected the 27th of ");break;
+            case 28 : System.out.println("You selected the 28th of ");break;
+            case 29 : System.out.println("You selected the 29th of ");break;
+            case 30 : System.out.println("You selected the 30th of ");break;
+            case 31 : System.out.println("You selected the 31st of ");break;
             default : System.out.println("Invalid Date");
         }
 
@@ -150,17 +150,17 @@ public static void Q3() {
 
     public static void Q4() {
         Random rng = new Random();
-
-        String action;
-        System.out.println("Q4: Let's play a game. Type \"A\" to attack, \"B\" to buff your next attack. Kill the enemy to win!");
-        System.out.println("Q4: You must roll higher than the enemy armor class (12) to hit. Roll 20 for a critical hit!");
-        System.out.println("Q4: Your damage is 2-16 (2d8)");
-
+        
         int enemyHP = 100;
         int enemyArmour = 12;
         int critChsnce = 20;
         int buff = 5;
         int turn = 0;
+
+        String action;
+        System.out.println("Q4: Let's play a game. Type \"A\" to attack, \"B\" to buff your next attack. Kill the enemy to win!");
+        System.out.println("Q4: You must roll higher than the enemy armor class ("+ enemyArmour + ") to hit. Roll 20 for a critical hit!");
+        System.out.println("Q4: Your damage is 2-16 (2d8)");
 
         boolean buffed = false;
         while (true) {
@@ -175,7 +175,7 @@ public static void Q3() {
                         doAttack = true;
                         break;
                     case "B", "b":
-                        check = true;
+                        buffed = true;
                         System.out.println("Buffing! +5 to your next attack roll and damage");
                         break;
                     default:
@@ -189,7 +189,7 @@ public static void Q3() {
                 int attackRoll = rng.nextInt(20) + 1;
                 int damage = 0;
                 System.out.print("You rolled: " + attackRoll);
-                if(hit) {
+                if(buffed) {
                     attackRoll += 5;
                     System.out.print(" + 5 (buff active)\n");
                 } else {
